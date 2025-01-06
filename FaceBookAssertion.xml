@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="FaceBook Test Suite" parallel="false" thread-count="2">
+    <test name="FaceBook URL check">
+        <classes>
+            <!-- Fully qualified class name, including the package name -->
+            <class name="FaceBookAssertion">  
+                <methods>
+                    <include name="FBTitle"/> 
+                    <include name="FBURL"/>            
+                </methods>
+            </class>
+        </classes>
+    </test>
+    
+    <test name="Check if Username field is empty">
+        <classes>
+            <!-- Fully qualified class name, including the package name -->
+            <class name="FaceBookAssertion">  
+                <methods>
+                    <include name="FBTitle"/> 
+                    <include name="FBText"/>                 
+                </methods>
+            </class>
+        </classes>
+    </test>
+    
+    <test name="Check username checkbox">
+        <classes>
+            <!-- Fully qualified class name, including the package name -->
+            <class name="FaceBookAssertion">  
+                <methods> 
+                    <include name="FBBorder"/> 
+                    <include name="FBErrorMessage"/> 
+                    <include name="FBWarnSign"/>                     
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
